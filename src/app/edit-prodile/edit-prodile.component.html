@@ -1,0 +1,99 @@
+<br>
+<div class="container">
+    <div class="column  is-6 is-offset-3">
+        <div class="card card-content has-text-centered">
+
+            <form class="has-text-left">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">First Name</label>
+                            <div class="control">
+                                <input class="input" type="text" [(ngModel)]="profileForm.fname" name="firstName"
+                                    placeholder="e.g Alex">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Last Name</label>
+                            <div class="control">
+                                <input class="input" type="text" [(ngModel)]="profileForm.lname" name="lastName"
+                                    placeholder="e.g Smith">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input class="input" type="text" disabled [(ngModel)]="profileForm.pno" name="pno"
+                            placeholder="e.g 1234567890">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email ID</label>
+                    <div class="control">
+                        <input class="input" type="email" [(ngModel)]="profileForm.email" name="email"
+                            placeholder="e.g. alexsmith@gmail.com">
+                    </div>
+                </div>
+                <div>
+
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Country</label>
+                                <div class="control">
+                                    <input class="input" type="text" [(ngModel)]="profileForm.address.country"
+                                        name="country" placeholder="e.g India">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">State</label>
+                                <div class="control">
+                                    <input class="input" type="text" [(ngModel)]="profileForm.address.state"
+                                        name="state" placeholder="e.g Maharastra">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">City</label>
+                                <div class="control">
+                                    <input class="input" type="text" [(ngModel)]="profileForm.address.city" name="city"
+                                        placeholder="e.g Pune">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Pin Code</label>
+                                <div class="control">
+                                    <input class="input" type="text" [(ngModel)]="profileForm.address.pinCode"
+                                        name="pincode" placeholder="e.g 123411">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <button class="button is-primary is-expended" (click)="onSubmit()">
+                    <strong>Update</strong>
+                </button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+<br>

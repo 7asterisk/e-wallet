@@ -1,0 +1,166 @@
+<br>
+<div class="container">
+    <div class="column  is-6 is-offset-3">
+        <div class="card card-content has-text-centered">
+
+            <H1 class="is-size-3">
+                Sign Up
+            </H1>
+
+            <br>
+            <form class="has-text-left" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">First Name</label>
+                            <div class="control">
+                                <input class="input" type="text" formControlName="fname" name="firstName"
+                                    placeholder="e.g Alex">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Last Name</label>
+                            <div class="control">
+                                <input class="input" type="text" formControlName="lname" name="lastName"
+                                    placeholder="e.g Smith">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div *ngIf="fname!['invalid'] && (fname!['dirty'] || fname!['touched'])" class="alert alert-danger">
+
+                    <div *ngIf="fname!['errors']!['required']">
+                        First name is required.
+                    </div>
+                    <!-- <div *ngIf="fname.errors.minlength">
+                Name must be at least 4 characters long.
+              </div> -->
+
+                </div>
+                <div class="field">
+                    <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input class="input" type="text" formControlName="pno" name="pno" placeholder="e.g 1234567890">
+                    </div>
+                </div>
+                <div *ngIf="pno!['invalid'] && (pno!['dirty'] || pno!['touched'])" class="alert alert-danger">
+
+                    <div *ngIf="pno!['errors']!['required']">
+                        Phone number is required.
+                    </div>
+                    <div *ngIf="pno!['errors']!['pattern']">
+                        Phone Number must be 10 digit number.
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+                    <label class="label">Email ID</label>
+                    <div class="control">
+                        <input class="input" type="email" formControlName="email" name="email"
+                            placeholder="e.g. alexsmith@gmail.com">
+                    </div>
+
+                </div>
+
+                <div *ngIf="email!['invalid'] && (email!['dirty'] || email!['touched'])" class="alert alert-danger">
+
+                    <div *ngIf="email!['errors']!['required']">
+                        Email is required.
+                    </div>
+                    <div *ngIf="email!['errors']!['email']">
+                        Invalied Email format.
+                    </div>
+
+                </div>
+
+
+
+                <div formGroupName="address">
+
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Country</label>
+                                <div class="control">
+                                    <input class="input" type="text" formControlName="country" name="country"
+                                        placeholder="e.g India">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">State</label>
+                                <div class="control">
+                                    <input class="input" type="text" formControlName="state" name="state"
+                                        placeholder="e.g Maharastra">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">City</label>
+                                <div class="control">
+                                    <input class="input" type="text" formControlName="city" name="city"
+                                        placeholder="e.g Pune">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Pin Code</label>
+                                <div class="control">
+                                    <input class="input" type="text" formControlName="pinCode" name="pincode"
+                                        placeholder="e.g 123411">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="password" formControlName="password" name="password"
+                            placeholder="e.g its-secret">
+                    </div>
+                </div>
+
+
+                <div *ngIf="password!['invalid'] && (password!['dirty'] || password!['touched'])"
+                    class="alert alert-danger">
+
+                    <div *ngIf="password!['errors']!['required']">
+                        password is required.
+                    </div>
+                    <div *ngIf="password!['errors']!['minlength']">
+                        Password Must have at list 4 charecters.
+                    </div>
+
+                </div>
+
+
+                <button class="button is-primary is-expended">
+                    <strong>Sign up</strong>
+                </button>
+            </form>
+            <br>
+
+            <p>Already have an account?
+            </p>
+            <a [routerLink]="[ '/login']">
+                Sign in
+            </a>
+        </div>
+    </div>
+</div>
+<br>

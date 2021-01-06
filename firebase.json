@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/hcwallet",
+    "site": "hce-wallet",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

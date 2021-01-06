@@ -1,0 +1,40 @@
+<div class="section">
+    <div class="container">
+        <div class="column is-4 is-offset-4">
+            <div class="card card-content">
+                <h1 class="is-size-3 has-text-centered">Login</h1>
+                <br>
+                <form action="">
+                    <div class="field">
+                        <label class="label">Phone Number</label>
+                        <div class="control">
+                            <input class="input" [(ngModel)]="pno" type="text" name="pno" placeholder="e.g 1234567890">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" [(ngModel)]="password" name="password"
+                                placeholder="e.g its-secret">
+                        </div>
+                    </div>
+                    <button class="button is-primary is-expended" (click)="login()">
+                        <strong>Login</strong>
+                    </button>
+                </form>
+                <br>
+                <div class="has-text-centered">
+
+                    <p>Don't have an account?
+                    </p>
+                    <a [routerLink]="[ '/signup']">
+                        Create account
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<p-toast position="top-right"></p-toast>

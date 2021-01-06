@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import"../node_modules/primeng/resources/themes/saga-blue/theme.css";
+@import"../node_modules/primeng/resources/primeng.min.css";
+@import"../node_modules/primeicons/primeicons.css";
+
+@import "../node_modules/bulma/css/bulma.min.css";
+html{
+    background: #FDF5F3;
+}
+.button.is-primary.is-hovered, .button.is-primary:hover {
+    background-color: #FF6338;
+    border-color: transparent;
+    color: #fff;
+}
+
+.button.is-primary{
+    background-color: #E24C10;
+}
+a{
+    color: #FF6338;
+}
+
+.is-expended{
+    width: -webkit-fill-available;
+}
+
+.label {
+   
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card{
+    color: #000;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+hr {
+   
+    margin: 0.5rem 0;
+}
